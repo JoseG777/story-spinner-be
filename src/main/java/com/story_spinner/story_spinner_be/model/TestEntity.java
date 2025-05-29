@@ -1,4 +1,4 @@
-package com.story_spinner.story_spinner_be;
+package com.story_spinner.story_spinner_be.model;
 
 import jakarta.persistence.*;
 
