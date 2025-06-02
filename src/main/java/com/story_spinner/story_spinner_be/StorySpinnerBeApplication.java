@@ -18,13 +18,14 @@ public class StorySpinnerBeApplication {
         System.setProperty("spring.datasource.url", dotenv.get("DB_URL"));
         System.setProperty("spring.datasource.username", dotenv.get("DB_USERNAME"));
         System.setProperty("spring.datasource.password", dotenv.get("DB_PASSWORD"));
+        System.setProperty("spring.datasource.driver-class-name", "org.postgresql.Driver");
 		SpringApplication.run(StorySpinnerBeApplication.class, args);
     }
 
     @Bean
     public CommandLineRunner run(TestRepository repo) {
         return args -> {
-            repo.save(new TestEntity("Connected to RDS - 4!"));
+            repo.save(new TestEntity("Connected to RDS - 10000!"));
             System.out.println("Inserted test entity into PostgreSQL.");
         };
     }
