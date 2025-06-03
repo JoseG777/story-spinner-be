@@ -6,7 +6,7 @@ import java.util.UUID;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "stories")
+@Table(name = "story")
 public class Story {
     @Id
     @GeneratedValue
@@ -36,7 +36,7 @@ public class Story {
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
     }
-    
+
     public LocalDateTime getCreationTime()
     {
         return this.createdAt;
