@@ -9,26 +9,22 @@ import org.springframework.context.annotation.Bean;
 import com.story_spinner.story_spinner_be.model.TestEntity;
 import com.story_spinner.story_spinner_be.repository.TestRepository;
 
+import com.story_spinner.story_spinner_be.model.Story;
+import com.story_spinner.story_spinner_be.repository.StoryRepository;
+
 @SpringBootApplication
 public class StorySpinnerBeApplication {
 
     public static void main(String[] args) {
-        // SpringApplication.run(StorySpinnerBeApplication.class, args);
-        // Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
-
-        // System.setProperty("spring.datasource.url", dotenv.get("DB_URL"));
-        // System.setProperty("spring.datasource.username", dotenv.get("DB_USERNAME"));
-        // System.setProperty("spring.datasource.password", dotenv.get("DB_PASSWORD"));
-        // System.setProperty("spring.datasource.driver-class-name", "org.postgresql.Driver");
-
         SpringApplication.run(StorySpinnerBeApplication.class, args);
     }
 
     @Bean
-    public CommandLineRunner run(TestRepository repo) {
+    public CommandLineRunner run(TestRepository repo, StoryRepository repo1) {
         return args -> {
-            repo.save(new TestEntity("Connected to RDS - 10000!"));
-            System.out.println("Inserted test entity into PostgreSQL.");
+            repo.save(new TestEntity("Connected to RDS - 002!"));
+            repo1.save(new Story("What a great story! - 001"));
+            System.out.println("Inserted test entities into PostgreSQL.");
         };
     }
 }
