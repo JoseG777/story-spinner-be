@@ -19,14 +19,16 @@ public class StorySpinnerBeApplication {
         SpringApplication.run(StorySpinnerBeApplication.class, args);
     }
 
+    /*
     @Bean
     public CommandLineRunner run(TestRepository repo, StoryRepository repo1) {
         return args -> {
-            repo.save(new TestEntity("Connected to RDS - 002!"));
-            repo1.save(new Story("What a great story! - 001"));
+            repo.save(new TestEntity("Connected to RDS - 004!"));
+            repo1.save(new Story("What a great story! - 003"));
             System.out.println("Inserted test entities into PostgreSQL.");
         };
     }
+    */
 }
 
 //  ./mvnw spring-boot:run

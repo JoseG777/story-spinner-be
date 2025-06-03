@@ -17,6 +17,10 @@ public class StoryService {
 
     public Story createStory(String story_)
     {
+        if(story_ == null)
+        {
+            throw new NullPointerException("Story content must not be null!");
+        }
         Story story = new Story(story_);
         return storyRepository.save(story);
     }
