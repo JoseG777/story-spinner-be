@@ -19,7 +19,6 @@ public class StorySpinnerBeApplication {
         SpringApplication.run(StorySpinnerBeApplication.class, args);
     }
 
-    /*
     @Bean
     public CommandLineRunner run(TestRepository repo, StoryRepository repo1) {
         return args -> {
@@ -28,7 +27,6 @@ public class StorySpinnerBeApplication {
             System.out.println("Inserted test entities into PostgreSQL.");
         };
     }
-    */
 }
 
 //  ./mvnw spring-boot:run
