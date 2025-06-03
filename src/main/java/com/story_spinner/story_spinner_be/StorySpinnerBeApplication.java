@@ -27,8 +27,7 @@ public class StorySpinnerBeApplication {
             repo1.save(new Story("What a great story! - 003"));
             System.out.println("Inserted test entities into PostgreSQL.");
         };
-    }
-    */
+    }*/
 }
 
 //  ./mvnw spring-boot:run
